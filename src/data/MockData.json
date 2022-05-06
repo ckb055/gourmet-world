@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "imageURL": "",
+        "foodName": "Pepperoni Pizza",
+        "foodDescription": "Pizza with pepperonis",
+        "foodPrice": 27.90
+    },
+    {
+        "id": 2,
+        "imageURL": "",
+        "foodName": "Hawaiian Pizza",
+        "foodDescription": "Pizza with ham and pineapples",
+        "foodPrice": 29.90
+    }
+
+
+]
