@@ -20,8 +20,9 @@ function Card(props: CardProps) {
                     {cardInfo.foodDescription}
                 </p>
                 <div className="card-priceAndOrder">
-                    <p className="card-price">{cardInfo.foodPrice}</p>
-                    <button className="card-orderButton">Order</button>
+                    <p className="card-market-price">{cardInfo.foodMarketPrice}</p>
+                    <p className="card-original-price">{cardInfo.foodOriginalPrice}</p>
+                    <button className="card-orderButton">ORDER</button>
                 </div>
             </div>
         </div>

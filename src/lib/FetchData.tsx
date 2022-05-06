@@ -1,6 +1,6 @@
 import { CardInfo } from './../data/CardInfo';
 
-export async function fetchFoodData(url: string) {
+async function fetchFoodData(url: string) {
     const res = await fetch(url, {
     headers: {
       'Cache-Control': 's-maxage=31536000, stale-while-revalidate',

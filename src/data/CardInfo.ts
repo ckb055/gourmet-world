@@ -3,7 +3,8 @@ export class CardInfo {
     imageURL : string = '';
     foodName : string = '';
     foodDescription : string = '';
-    foodPrice : number | undefined;
+    foodOriginalPrice : number | undefined;
+    foodMarketPrice : number | undefined;
 
     constructor(initializer?: any) {
         if (!initializer) return;
@@ -11,6 +12,7 @@ export class CardInfo {
         if (initializer.imageURL) this.imageURL = initializer.imageURL;
         if (initializer.foodName) this.foodName = initializer.foodName;
         if (initializer.foodDescription) this.foodDescription = initializer.foodDescription;
-        if (initializer.foodPrice) this.foodPrice = initializer.foodPrice;
+        if (initializer.foodOriginalPrice) this.foodOriginalPrice = initializer.foodOriginalPrice;
+        if (initializer.foodMarketPrice) this.foodMarketPrice = initializer.foodMarketPrice;
     }
 }

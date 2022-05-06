@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { MockData } from './../data/MockData';
 import CardList from './card/CardList';
 import { CardInfo } from './../data/CardInfo';
-import { fetchFoodData, fetchFoodDataArray } from './../lib/FetchData';
+import { fetchFoodDataArray } from './../lib/FetchData';
 import { ApiUrlArray } from './../data/ApiUrlArray';
 
 function Menu() {
@@ -19,7 +19,8 @@ function Menu() {
                                 imageURL: res[i].result.foodImage,
                                 foodName : res[i].result.foodName,
                                 foodDescription : res[i].result.foodDesc,
-                                foodPrice : res[i].result.foodOrinalPrice
+                                foodMarketPrice : res[i].result.foodMarketPrice,
+                                foodOriginalPrice : res[i].result.foodOrinalPrice,
                             })
                         setCardList(curr => [...curr, card]);
                         }

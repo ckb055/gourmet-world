@@ -1,9 +1,6 @@
 import { CardInfo } from './../../data/CardInfo';
 import Card from './Card';
 import './../../styles/card/Card.scss';
-import { fetchFoodData , fetchFoodDataArray } from './../../lib/FetchData';
-import { ApiUrlArray } from './../../data/ApiUrlArray';
-import React, { useEffect, useState } from 'react';
 
 interface CardListProps {
     cards: CardInfo[];
