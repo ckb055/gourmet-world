@@ -1,13 +1,12 @@
-
-export type RequestToMake = () => Promise<void>;
+export type RequestToMake = Promise<any>;
 
 async function throttleRequests(
     requestsToMake: RequestToMake[],
     maxParallelRequests = 3 
 ) {
-    const queue: Promise<void>[] = [];
+    const queue: Promise<any>[] = [];
     for (let requestToMake of requestsToMake) {
-        const promise = requestToMake().then((res) => {
+        const promise = requestToMake.then((res) => {
             queue.splice(queue.indexOf(promise), 1); // remove the promise from the queue when done
             return res;
         });
@@ -25,7 +24,7 @@ async function throttleRequests(
   
 }
 
-function useThrottle(
+export function useThrottle(
     requestsToMake : RequestToMake[]
 ) {
     throttleRequests(requestsToMake);
