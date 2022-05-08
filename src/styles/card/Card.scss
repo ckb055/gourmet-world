@@ -18,6 +18,10 @@
       min-width: 360px;
       max-width: 360px;
 
+      .img-container {
+        position: relative;
+      }
+
       img {
         min-width: 100%;
         height: 50%;
@@ -25,6 +29,13 @@
         height: auto;
         object-fit: cover;
         object-position: 50% 50%;
+      }
+
+      .img-info {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 24px;
       }
 
       .card-body {

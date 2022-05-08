@@ -16,7 +16,7 @@ Node version 15.9.0 was used for this project
 
 To install SASS dependencies (if not already installed)
 
-### `npm start`
+### `npm run start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

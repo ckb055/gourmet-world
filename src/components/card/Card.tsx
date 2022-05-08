@@ -1,4 +1,4 @@
-import react from 'react';
+import {FiInfo} from "react-icons/fi";
 import { CardInfo } from './../../data/CardInfo';
 import './../../styles/card/Card.scss';
 
@@ -11,7 +11,11 @@ function Card(props: CardProps) {
 
     return (
         <div className="card">
-            <img src={cardInfo.imageURL}></img>
+            <div className="img-container">
+            <FiInfo className="img-info"/>
+            <img src={cardInfo.imageURL}>
+            </img>
+            </div>
             <div className="card-body">
                 <h2 className="card-foodName">
                     {cardInfo.foodName}
