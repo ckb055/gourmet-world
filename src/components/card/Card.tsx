@@ -1,4 +1,4 @@
-import {FiInfo} from "react-icons/fi";
+import { BsInfoCircleFill } from "react-icons/bs";
 import { CardInfo } from './../../data/CardInfo';
 import './../../styles/card/Card.scss';
 
@@ -12,7 +12,7 @@ function Card(props: CardProps) {
     return (
         <div className="card">
             <div className="img-container">
-            <FiInfo className="img-info"/>
+            <BsInfoCircleFill className="img-info"/>
             <img src={cardInfo.imageURL}>
             </img>
             </div>

@@ -1,7 +1,6 @@
 import { CardInfo } from './../../data/CardInfo';
 import Card from './Card';
 import './../../styles/card/Card.scss';
-import { useEffect } from 'react';
 
 interface CardListProps {
     cards: CardInfo[];
