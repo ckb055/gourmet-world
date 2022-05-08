@@ -1,8 +1,9 @@
 # Gourmet World
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
-Frameworks used : React Typescript, SASS css\
-Icon library used : React Icons
+Frameworks used : React Typescript Version 18.1.0, SASS css\
+Icon library used : React Icons\
+Browser used for development : Google Chrome Version 101.0.4951.54
 
 ## Installation Guide
 
