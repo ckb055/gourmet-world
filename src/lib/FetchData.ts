@@ -1,4 +1,4 @@
-async function fetchFoodData(url: string) {
+export async function fetchFoodData(url: string) {
     const res = await fetch(url, {
     headers: {
       'Cache-Control': 's-maxage=31536000, stale-while-revalidate',
@@ -25,13 +25,11 @@ export async function fetchFoodDataArray(urlArray: string[]) {
 
 export async function fetchFoodDataArrayWithThrottle(urlArray: string[], maxParallelRequests = 3) {
     const queue: Promise<any>[] = [];
-    const requestsToMake = urlArray.map(
-        (url) => async () => {fetchFoodData(url)}
-    )
-    for (let req of requestsToMake) {
-        const promise = req().then((res) => {
+    const dataArray: any[] = [];
+    for (let url of urlArray) {
+        const promise = fetchFoodData(url).then((res) => {
             queue.splice(queue.indexOf(promise), 1); // remove the promise from the queue when done
-            return res;
+            dataArray.push(res);
         });
 
         queue.push(promise);
@@ -39,8 +37,13 @@ export async function fetchFoodDataArrayWithThrottle(urlArray: string[], maxPara
         // stop adding requests when the queue length is 3
         // allow further enqueues after one has finished
         if (queue.length >= maxParallelRequests) {
-            await Promise.race(queue); 
+            // pauses the async function until the first promise in the array is fulfilled
+            await Promise.race(queue);
         }
     }
+
+    // resolve the remaining promises in the queue
     await Promise.all(queue);
+
+    return dataArray;
 }
