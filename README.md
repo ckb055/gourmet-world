@@ -30,7 +30,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 To view the throttling of API requests, startup the development server with `npm run start`.\
 Open Chrome Devtools using Option + ⌘ + J (on macOS), or Shift + CTRL + J (on Windows/Linux), or right click anywhere -> Inspect.\
-Go to the network tab and refresh the page. You will see that only 3 requests are processed at any time.\
+Go to the Network tab and refresh the page. You will see that at any point in time, only 3 requests are processed.
 
 ## Learn More
 
