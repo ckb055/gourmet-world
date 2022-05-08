@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { MockData } from './../data/MockData';
 import CardList from './card/CardList';
 import { CardInfo } from './../data/CardInfo';
-import { fetchFoodData, fetchFoodDataArray, fetchFoodDataArrayWithThrottle } from './../lib/FetchData';
+import { fetchFoodDataArray, fetchFoodDataArrayWithThrottle } from './../lib/FetchData';
 import { ApiUrlArray } from './../data/ApiUrlArray';
 
 function Menu() {
