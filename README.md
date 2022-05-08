@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
 Frameworks used : React Typescript, SASS css\
-Icon library used : React Icons\
+Icon library used : React Icons
 
 ## Installation Guide
 
