@@ -17,6 +17,10 @@ Node version 15.9.0 was used for this project
 
 To install SASS dependencies (if not already installed)
 
+### `npm install react-icons --save`
+
+To install react icons
+
 ### `npm run start`
 
 Runs the app in the development mode.\
