@@ -10,7 +10,7 @@ Clone the repository to your local.
 
 ### `npm i`
 
-To install relevant node modules
+To install relevant node modules\
 Node version 15.9.0 was used for this project
 
 ### `npm i sass --save-dev`
